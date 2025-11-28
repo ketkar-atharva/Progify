@@ -26,6 +26,10 @@ app.get("/tasks",async(req,res)=>{
      let alltasks=await Task.find({});
      res.render("tasks/index",{alltasks});
 });
+//new api
+app.get("/tasks/new",(req,res)=>{
+    res.render("tasks/new");
+})
 
 //show api
 app.get("/tasks/:id",async(req,res)=>{
@@ -34,6 +38,21 @@ app.get("/tasks/:id",async(req,res)=>{
     res.render("tasks/show",{task});
 
 })
+
+//create api
+app.post("/tasks",async(req,res)=>{
+    let newtask=new Task(req.body.tasks);
+    await newtask.save();
+    res.redirect("/tasks");
+    
+})
+//delete api
+app.get("/tasks/delete/:id",async(req,res)=>{
+   let{id}=req.params;
+   await Task.findByIdAndDelete(id);
+   res.redirect("/tasks");
+})
+
 
 
 

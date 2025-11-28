@@ -6,7 +6,11 @@
     <title>ProgiFy</title>
 </head>
 <body>
-    <h1>All tasks</h1>
+    <h1>All tasks</h1><br>
+    <form method="get" action="/tasks/new">
+        <button type="submit">Add task</button>
+    </form>
+
     <ul>
         <% for(let task of alltasks){ %>
             <li><a href="/tasks/<%=task._id%>"><%=task.title%></a></li>
