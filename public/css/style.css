@@ -1,0 +1,43 @@
+body{
+    height: 100% !important;
+    margin: 0;
+    padding: 0;
+
+}
+
+/* Footer */
+.f-info{
+    width: 100%;
+    height: 8rem;
+    background-color: rgb(219, 218, 218);
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    align-items:space-evenly;
+    position: fixed;
+    bottom: 0;
+    left: 0%;
+
+}
+.f-socials{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-top: 5px;
+    font-size: 22px;
+}
+.f-terms{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px
+    
+}
+.f-socials i{
+    margin-left: 1rem;
+    font-size: 22px;
+}
+.f-terms a{
+    margin-left: 1rem;
+}

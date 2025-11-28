@@ -1,0 +1,12 @@
+<%layout("/layouts/boilerplate")-%>
+<body>
+    <h2>Edit Task</h2>
+    <form method="post" action="/update/<%=edittask._id%>?_method=PUT">
+        <input name="tasks[title]" value=<%=edittask.title%> type="text" required><br>
+          <textarea name="tasks[description]" value=<%=edittask.description%>  type="text" required></textarea><br>
+          <input name="tasks[img]" placeholder="enter link" type="text" ><br>
+          <br>
+          <button>Edit</button>
+    </form>
+    
+</body>
