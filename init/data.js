@@ -13,7 +13,10 @@ let sampledata=[
     title:"trip",
     description:"plan for trip",
     img:""
-}
+},
+
+
+
 
 ];
 

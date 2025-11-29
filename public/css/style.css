@@ -2,6 +2,9 @@ body{
     height: 100% !important;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
 }
 
@@ -14,7 +17,7 @@ body{
     justify-content:center;
     flex-wrap:wrap;
     align-items:space-evenly;
-    position: fixed;
+   
     bottom: 0;
     left: 0%;
 
@@ -40,4 +43,16 @@ body{
 }
 .f-terms a{
     margin-left: 1rem;
+}
+
+/*Card style*/
+
+.card{
+    border: none !important;
+    margin: 2rem;
+}
+.card-img-top{
+    border-radius: 1rem;
+    width: 100%;
+    object-fit: cover;
 }
