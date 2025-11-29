@@ -1,7 +1,8 @@
 <%layout("/layouts/boilerplate")-%>
 <body>
     <h2><%=task.title%></h2>
-    <p><%=task.description%></p>
+    <p><%=task.description%></p> <button><a href="/tasks/taskdata/<%=task._id%>">Add</a></button>
+
 
     <button><a href="/tasks/edit/<%=task._id%>">Edit</a></button>
     <button><a href="/tasks/delete/<%=task._id%>">Delete</a></button>

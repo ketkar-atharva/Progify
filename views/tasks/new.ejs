@@ -1,12 +1,23 @@
 <%layout("/layouts/boilerplate")-%>
 <body>
+    <br>
     <h2>Add new Task</h2> <br>
     <form method="post" action="/tasks">
-          <input name="tasks[title]" placeholder="enter title" type="text" required><br>
-          <textarea name="tasks[description]" placeholder="wrtie description" type="text" required></textarea><br>
-          <input name="tasks[img]" placeholder="enter link" type="text" ><br>
+          <div>
+            <label for="title" class="form-label">Title:</label>
+            <input name="tasks[title]" placeholder="enter title" type="text" required class="form-control"><br>
+          </div>
+          <div>
+            <label for="description" class="form-label">Description:</label>
+            <textarea name="tasks[description]" placeholder="wrtie description" type="text" required class="form-control"></textarea><br>
+          </div>
+          <div>
+            <label for="img" class="form-label">Background-Image:</label>
+            <input name="tasks[img]" placeholder="enter link" type="text" class="form-control">
+          </div>
           <br>
-          <button>Add</button>
+          <br>
+          <button type="button" class="btn btn-primary">Add</button>
     </form>
 
 </body>

@@ -2,6 +2,7 @@ let express=require('express');
 let app=express()
 let mongoose=require('mongoose');
 const Task=require('./models/task.js');
+const TaskData=require("./models/taskdata.js");
 let path=require("path");
 let methodoverride=require("method-override");
 let ejsmate=require("ejs-mate");
@@ -73,6 +74,21 @@ app.put("/update/:id",async(req,res)=>{
     res.redirect("/tasks");
 });
 
+//New TaskData api
+app.get("/tasks/taskdata/:id",(req,res)=>{
+    let {id}=req.params;
+    res.render("tasks/tasknew",{id});
+})
+
+// Create New TaskData api
+app.post("/create/taskdata/:id",async(req,res)=>{
+   let {id}=req.params;
+   let newtaskdata=new TaskData(req.body.taskdata);
+   newtaskdata.taskowner_id=id;
+   await newtaskdata.save();
+   res.redirect("tasks/show");
+
+});
 
 
 
